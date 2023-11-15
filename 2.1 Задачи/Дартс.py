@@ -10,3 +10,12 @@
 #
 # Примечание 1. Гарантируется, что сторона игрового поля не превышает 18
 
+
+def darts(n):
+    for i in range(n):
+        for j in range(n):
+            print(min(i, j, n-1-i, n-1-j) + 1, end=' ')
+        print()
+darts(int(input()))
+
+
