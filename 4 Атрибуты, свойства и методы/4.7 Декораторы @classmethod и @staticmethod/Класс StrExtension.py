@@ -23,9 +23,27 @@ class StrExtension:
         return l
 
     @staticmethod
-    def leave_alpha():
-        pass
+    def leave_alpha(text):
+        letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        l = ''
+        for i in text:
+            if i in letters:
+                l += i
+        return l
 
     @staticmethod
-    def replace_all():
-        pass
+    def replace_all(string, chars, char):
+        l = ''
+        for i in string:
+            if i in chars:
+                l += char
+            else:
+                l += i
+        return l
+
+print(StrExtension.remove_vowels('Python'))
+print(StrExtension.remove_vowels('Stepik'))
+print(StrExtension.leave_alpha('Python111'))
+print(StrExtension.leave_alpha('__Stepik__()'))
+print(StrExtension.replace_all('Python', 'Ptn', '-'))
+print(StrExtension.replace_all('Stepik', 'stk', '#'))
