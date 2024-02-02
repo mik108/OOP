@@ -48,8 +48,8 @@ class SuperString:
         else:
             return NotImplemented
 
-    def __lshift__(self,n):
-        if isinstance(n,int):
+    def __lshift__(self, n):
+        if isinstance(n, int):
             if n >= len(self.string):
                 return SuperString('')
             else:
